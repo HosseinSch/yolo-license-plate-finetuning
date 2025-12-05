@@ -1,0 +1,20 @@
+cat > .gitignore <<EOF
+# Python venv
+.venv/
+venv/
+
+# Cache
+__pycache__/
+*.pyc
+
+# YOLO outputs
+runs/
+output/
+
+# Editor
+.vscode/
+.idea/
+EOF
+.venv/
+runs/
+output/
