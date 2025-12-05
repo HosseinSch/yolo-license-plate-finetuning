@@ -32,17 +32,13 @@ yolo_training/
 ├─ weights/
 │  └─ yolov8_plate.pt        # pre-trained plate model (from Kaggle)
 ├─ my_finetune_data/
-│  ├─ data.yaml              # dataset config
-│  ├─ images/
-│  │  ├─ train/
-│  │  └─ val/
-│  └─ labels/
-│     ├─ train/
-│     └─ val/
-├─ images/                    # input images for inference
-└─ output/
-   ├─ images/                 # annotated images
-   └─ plates/                 # cropped license plates
+   ├─ data.yaml              # dataset config
+   ├─ images/
+   │  ├─ train/
+   │  └─ val/
+   └─ labels/
+      ├─ train/
+      └─ val/
 ```
 
 Paths in the scripts are set relative to this structure.
@@ -91,11 +87,12 @@ Each image in `images/train` / `images/val` has a corresponding YOLO label file 
 Example `data.yaml`:
 
 ```yaml
-train: images/train
-val: images/val
-
+train: train/images
+val: val/images
 nc: 1
-names: ['license_plate']
+names: [
+    0: 'license_plate'
+]
 ```
 
 Key points:
