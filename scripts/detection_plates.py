@@ -49,7 +49,7 @@ print(f"Lese Bilder aus: {INPUT_FOLDER}")
 print(f"Speichere bearbeitete Bilder in: {OUTPUT_IMG_FOLDER}")
 print(f"Speichere ausgeschnittene Kennzeichen in: {OUTPUT_PLATE_FOLDER}")
 
-# Modell laden (nutzt automatisch CPU bei dir)
+# Modell laden 
 model = YOLO(model_path)
 
 # Nur Bilddateien berücksichtigen
